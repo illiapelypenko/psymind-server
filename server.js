@@ -11,7 +11,7 @@ const events = require('./routes/events');
 const chainedAccounts = require('./routes/chainedAccounts');
 
 const app = express();
-const { port } = require('./config');
+const port = process.env.PORT || 5000;
 
 app.use(bodyParser.json());
 app.use(cors());
